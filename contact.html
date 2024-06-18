@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/grid.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <title>Zima Energy</title>
+  </head>
+  <body>
+    <h1 class="hidden">Zima Energy</h1>
+    <!-- Main Nav -->
+    <div id="sticky-nav-con">
+      <header id="header">
+        <div class="grid-con" id="main-header">
+          <nav id="main-nav" class="col-span-full m-col-start-4 m-col-end-11">
+            <div>
+              <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div id="logo" class="col-span-full m-col-start-1 m-col-end-4">
+              <img src="images/Zima_logo copy.png" alt="Zima Logo" />
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <!--Contact us-->
+    <div class="grid-con">
+      <h2 class="hidden">Contact Us</h2>
+      <div id="contact-hero-text" class="line-separator col-span-full">
+        <p>Tell Us About You</p>
+      </div>
+
+      <div id="contact-hero-form" class="col-span-full">
+        <form action="#" method="post">
+          <input
+            name="fullName"
+            type="text"
+            required
+            placeholder="First & Last Name"
+          /><br />
+
+          <input
+            name="contactInfo"
+            type="text"
+            required
+            placeholder="Phone number or Email"
+          /><br />
+
+          <textarea
+            name="msg"
+            placeholder="Leave your questions in here... "
+          ></textarea>
+          <section class="checkbox-section">
+            <input type="checkbox" id="terms-input" />
+            <label class="terms-label" for="terms-input"
+              >I agree with terms</label
+            ><br />
+            <input type="checkbox" id="subscribe-input" />
+            <label class="terms-label" for="subscribe-input"
+              >Subscribe our newsletter</label
+            >
+          </section>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
