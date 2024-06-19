@@ -131,11 +131,21 @@
   padding: 10px;
 }
 
-#contact-hero-image h2 {
+#contact-hero-image h1 {
   color: black;
-  background-color: #d6df28;
+  background-color: #cce7d0;
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-hero-image h2 {
+  color: black;
+  background-color: #cce7d0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
   font-weight: 700;
   margin: 0;
   padding: 0;
