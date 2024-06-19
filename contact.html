@@ -1,77 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZIMA Energy</title>
 
-
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-
-          <!-- Nav bar -->
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Nav bar -->
     <header id="header">
-        <a href="#"><img src="images/zima logo.svg" height="80px" class="logo" alt=""></a>
+      <a href="#"
+        ><img src="images/zima logo.svg" height="80px" class="logo" alt=""
+      /></a>
 
-  
-        <div>
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a  class="active" href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                
-            </ul>
-        </div>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
     </header>
 
-     <!-- Footer -->
+    <!-- Contact page-->
 
-     <footer class="section-p1">
-        <div class="col">
-            <img class="logo" src="images/zima logo.svg" height="80px" alt="">
-            <h4>Contact Us</h4>
-            <p><strong>Address: </strong>562 Dundas Street, Street 32. London, Ontario</p>
-            <p><strong>Phone: </strong> +01 2222 365/ +01 2222 365</p>
-            <p><strong>Hourclasss: </strong> 10:00 - 18:00 Mon - Sat</p>
-            <div class="follow">
-                <h4>Follow Us</h4>
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
+    <div id="hero" class="col-span-full">
+      <section class="grid-con">
+        <h1 class="contact">Contact Information</h1>
+        <section id="contact-hero-text" class="line-separator col-span-full">
+          <h2>How Can We Help?</h2>
+        </section>
+        <form action="#" method="post" enctype="text/plain">
+          <p>Full Name</p>
+          <input
+            name="fullName"
+            type="text"
+            required
+            placeholder="First & Last Name"
+          />
+          <p>Phone number</p>
+          <input
+            name="contactInfo"
+            type="text"
+            required
+            placeholder="Phone number "
+          />
+          <p>Email</p>
+          <input name="contactInfo" type="text" required placeholder="Email" />
+          <p>Your Inquiry</p>
+          <textarea
+            name="msg"
+            placeholder="Enter your questions, comments or concerns here..."
+          ></textarea>
+          <button>submit</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="images/zima logo.svg" height="80px" alt="" />
+        <h4>Contact Us</h4>
+        <p>
+          <strong>Address: </strong>562 Dundas Street, Street 32. London,
+          Ontario
+        </p>
+        <p><strong>Phone: </strong> +01 2222 365/ +01 2222 365</p>
+        <p><strong>Hourclasss: </strong> 10:00 - 18:00 Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
         </div>
-    
-        <div class="col">
-            <h4>About</h4>
-            <a href="#">About us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
-            <a href="#">Contact us</a>
-            
-        </div>
-    
-        <div class="col">
-            <h4>My Account</h4>
-            <a href="#">Sign In</a>
-            <a href="#">View Cart</a>
-            <a href="#">My Wishlist</a>
-            <a href="#">Track my order</a>
-            <a href="#">Help</a>
-        </div>
-    
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Contact us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track my order</a>
+        <a href="#">Help</a>
+      </div>
     </footer>
-    
-        <script src="js/script.js"></script>
 
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
