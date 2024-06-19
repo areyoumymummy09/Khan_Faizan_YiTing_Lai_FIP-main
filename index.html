@@ -1,191 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-      </style>
-    <link href="css/grid.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <title>Zima Energy</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIMA Energy</title>
 
-  <body>
-    <!-- Main Nav -->
-    <div id="sticky-nav-con">
-      <header id="header">
-        <div class="grid-con" id="main-header">
-          <nav id="main-nav" class="col-span-full m-col-start-4 m-col-end-11">
 
-            <div>
-              <ul id="navbar">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+          <!-- Nav bar -->
+    <header id="header">
+        <a href="#"><img src="images/zima logo.svg" height="80px" class="logo" alt=""></a>
+
+  
+        <div>
+            <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-
-            <div id="logo" class="col-span-full m-col-start-1 m-col-end-4">
-              <img src="images/Zima_logo copy.png" alt="Zima Logo">
-            </div>
-          </nav>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                
+            </ul>
         </div>
-      </header>
-    </div>
-
-
-             <!-- Main Hero -->
-        <section id="hero" class="full-width-grid-con">
-            <h2 class="hidden">Zima Product </h2>
-            <img
-            sizes="(max-width: 930px) 100vw, 930px"
-                srcset="
-                images/Poster_5_yrq3gh_c_scale,w_170.png 170w,
-                images/Poster_5_yrq3gh_c_scale,w_286.png 286w,
-                images/Poster_5_yrq3gh_c_scale,w_378.png 378w,
-                images/Poster_5_yrq3gh_c_scale,w_458.png 458w,
-                images/Poster_5_yrq3gh_c_scale,w_527.png 527w,
-                images/Poster_5_yrq3gh_c_scale,w_590.png 590w,
-                images/Poster_5_yrq3gh_c_scale,w_652.png 652w,
-                images/Poster_5_yrq3gh_c_scale,w_712.png 712w,
-                images/Poster_5_yrq3gh_c_scale,w_765.png 765w,
-                images/Poster_5_yrq3gh_c_scale,w_816.png 816w,
-                images/Poster_5_yrq3gh_c_scale,w_866.png 866w,
-                images/Poster_5_yrq3gh_c_scale,w_915.png 915w,
-                images/Poster_5_yrq3gh_c_scale,w_930.png 930w"
-                src=" images/Poster_5_yrq3gh_c_scale,w_930.png"
-                alt="hero-image">
-
-            <div class="grid-con">
-                <div class="col-span-full m-col-start-2 m-col-end-12 line-separator"></div>
-                <div class="col-span-full m-col-span-4 products-image-con" id="product_grapes">
-                    <div class="flavours">
-                        <img
-            sizes="(max-width: 3840px) 100vw, 3840px"
-            srcset="
-            images/grapes_ovgjku_c_scale,w_170.jpg 170w,
-            images/grapes_ovgjku_c_scale,w_785.jpg 785w,
-            images/grapes_ovgjku_c_scale,w_1136.jpg 1136w,
-            images/grapes_ovgjku_c_scale,w_1480.jpg 1480w,
-            images/grapes_ovgjku_c_scale,w_1806.jpg 1806w,
-            images/grapes_ovgjku_c_scale,w_2086.jpg 2086w,
-            images/grapes_ovgjku_c_scale,w_2463.jpg 2463w,
-            images/grapes_ovgjku_c_scale,w_2816.jpg 2816w,
-            images/grapes_ovgjku_c_scale,w_3078.jpg 3078w,
-            images/grapes_ovgjku_c_scale,w_3343.jpg 3343w,
-            images/grapes_ovgjku_c_scale,w_3441.jpg 3441w,
-            images/grapes_ovgjku_c_scale,w_3604.jpg 3604w,
-            images/grapes_ovgjku_c_scale,w_3840.jpg 3840w"
-            src=" images/grapes_ovgjku_c_scale,w_3840.jpg"
-            alt="grapes">
-                    </div>
-                    <h2>Our Drinks</h2>
-                    <p>Drinks on Demand </p>
-                    
-                    <a href="#">CLICK TO LEARN MORE...</a>
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4 " id="product_lemon">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/lemon_bhcjmc_c_scale,w_190.jpg 190w,
-                        images/lemon_bhcjmc_c_scale,w_924.jpg 924w,
-                        images/lemon_bhcjmc_c_scale,w_1361.jpg 1361w,
-                        images/lemon_bhcjmc_c_scale,w_1783.jpg 1783w,
-                        images/lemon_bhcjmc_c_scale,w_2308.jpg 2308w,
-                        images/lemon_bhcjmc_c_scale,w_2690.jpg 2690w,
-                        images/lemon_bhcjmc_c_scale,w_3061.jpg 3061w,
-                        images/lemon_bhcjmc_c_scale,w_3388.jpg 3388w,
-                        images/lemon_bhcjmc_c_scale,w_3538.jpg 3538w,
-                        images/lemon_bhcjmc_c_scale,w_3840.jpg 3840w"
-                        src="images/lemon_bhcjmc_c_scale,w_3840.jpg"
-                        alt="lemon">
-                    </div>
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4 " id="product_melon">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/melon_oabvp5_c_scale,w_190.jpg 190w,
-                        images/melon_oabvp5_c_scale,w_718.jpg 718w,
-                        images/melon_oabvp5_c_scale,w_1567.jpg 1567w,
-                        images/melon_oabvp5_c_scale,w_1713.jpg 1713w,
-                        images/melon_oabvp5_c_scale,w_1850.jpg 1850w,
-                        images/melon_oabvp5_c_scale,w_2687.jpg 2687w,
-                        images/melon_oabvp5_c_scale,w_3170.jpg 3170w,
-                        images/melon_oabvp5_c_scale,w_3347.jpg 3347w,
-                        images/melon_oabvp5_c_scale,w_3529.jpg 3529w,
-                        images/melon_oabvp5_c_scale,w_3840.jpg 3840w"
-                        src="images/melon_oabvp5_c_scale,w_3840.jpg"
-                        alt="melon">
-                    </div>
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4" id="orange">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/orange_rul5qw_c_scale,w_190.jpg 190w,
-                        images/orange_rul5qw_c_scale,w_902.jpg 902w,
-                        images/orange_rul5qw_c_scale,w_1338.jpg 1338w,
-                        images/orange_rul5qw_c_scale,w_1779.jpg 1779w,
-                        images/orange_rul5qw_c_scale,w_2199.jpg 2199w,
-                        images/orange_rul5qw_c_scale,w_2679.jpg 2679w,
-                        images/orange_rul5qw_c_scale,w_3057.jpg 3057w,
-                        images/orange_rul5qw_c_scale,w_3345.jpg 3345w,
-                        images/orange_rul5qw_c_scale,w_3532.jpg 3532w,
-                        images/orange_rul5qw_c_scale,w_3840.jpg 3840w"
-                        src="images/orange_rul5qw_c_scale,w_3840.jpg"
-                        alt="orange">
-                    </div>
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4" id="oringal">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/poster_2_yrwbxz_c_scale,w_190.jpg 190w,
-                        images/poster_2_yrwbxz_c_scale,w_1051.jpg 1051w,
-                        images/poster_2_yrwbxz_c_scale,w_1556.jpg 1556w,
-                        images/poster_2_yrwbxz_c_scale,w_1968.jpg 1968w,
-                        images/poster_2_yrwbxz_c_scale,w_2373.jpg 2373w,
-                        images/poster_2_yrwbxz_c_scale,w_2715.jpg 2715w,
-                        images/poster_2_yrwbxz_c_scale,w_3074.jpg 3074w,
-                        images/poster_2_yrwbxz_c_scale,w_3387.jpg 3387w,
-                        images/poster_2_yrwbxz_c_scale,w_3617.jpg 3617w,
-                        images/poster_2_yrwbxz_c_scale,w_3840.jpg 3840w"
-                        src="images/poster_2_yrwbxz_c_scale,w_3840.jpg"
-                        alt="orginal">
-                </div>
-            </div>
-            </div>
-            <section id="banner" class="section-follow-us">
-                <h2>Follow Us <br>
-                    &amp Join  </h2>
-            </section>
         
-     
-         <footer id="footer-hero" class="grid-con">
-                <section id="footer-contact-info" class="col-span-full">
-                    <h3>Zima</h3>
-                    <p>130 Dundas St, London, ON N6A 1G2<br>
-                        <p>Tel:1-555-KING-225 (558 589)</p>
-                    </p>
-                   
-                </section>
-                <div id="footer-privacy" class="col-span-full line-separator">
-                    <p id="privacy_policy"> ©ZimaEnergy All Rights Reserved. Privacy Policy </p>
-                </div>
-        </footer>
-        </section>
-    </body>
+    </header>
 
-</html>
+    <section id="hero">
+        <h1>ENERGIZE, REFRESH</h1>
+        <h2>Energy drink like never before</h2>
+        <p>Save more with coupons with sale upto 50%</p>
+        <button>Shop now</button>
+    </section>
+
+    <!-- Flavours/ Products -->
+
+    <section id="product1" class="section-p1">
+        <h2>Flavours of ZIMA ENERGY DRINK</h2>
+        <p>Collection that you wish for</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="images/original.jpg" alt="product image">
+                <div class="des">
+                    <span>Original</span>
+                    <h5>ZIMA Original Flavour Drink </h5>
+                    <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$185</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+            
+
+            <div class="pro" >
+                <img src="images/grapes.jpg" alt="product image">
+                <div class="des">
+                    <span>Grape Delight</span>
+                    <h5>ZIMA grape Flavour Drink</h5>
+                    <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$185</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="images/orange.jpg" alt="product image">
+                <div class="des">
+                    <span>Orange Punch</span>
+                    <h5>ZIMA Orange Flavour Drink</h5>
+                    <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$185</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="images/lemon.jpg" alt="product image">
+                <div class="des">
+                    <span>Lemon Spark</span>
+                    <h5>ZIMA lemon Flavour Drink</h5>
+                    <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$185</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="images/melon.jpg" alt="product image">
+                <div class="des">
+                    <span>Melon Splash</span>
+                    <h5>ZIMA Melon Flavour Drink</h5>
+                    <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$185</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+            <div class="pro" >
+                <img src="images/grapes.jpg" alt="product image">
+                <div class="des">
+                    <span>Grape Delight</span>
+                    <h5>ZIMA grape Flavour Drink</h5>
+                    <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$185</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/zima logo.svg" height="80px" alt="">
+            <h4>Contact Us</h4>
+            <p><strong>Address: </strong>562 Dundas Street, Street 32. London, Ontario</p>
+            <p><strong>Phone: </strong> +01 2222 365/ +01 2222 365</p>
+            <p><strong>Hourclasss: </strong> 10:00 - 18:00 Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact us</a>
+            
+        </div>
+    
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+    
+    </footer>
+    
+        <script src="js/script.js"></script>
+    </body>
+    </html>
+    
