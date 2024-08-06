@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZIMA Energy</title>
-
-    <link rel="stylesheet" href="css/grid.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- Nav bar -->
-    <header id="header">
-      <a href="#"
-        ><img src="images/zima logo.svg" height="80px" class="logo" alt=""
-      /></a>
-
-      <div>
+    <header id="header" class="col-span-full m-col-start-1 m-col-end-4">
+      <a href="#">
+        <img
+          src="images/zima logo.svg"
+          height="80px"
+          class="logo"
+          alt="hero image"
+        />
+      </a>
+      <div id="sticky-nav-con">
         <ul id="navbar">
           <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="product.html">Product</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li id="lg-bag">
             <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
@@ -29,128 +30,124 @@
       </div>
     </header>
 
-    <section id="hero">
-      <h1>ENERGIZE, REFRESH</h1>
-      <h2>Energy drink like never before</h2>
-      <p>Save more with coupons with sale upto 50%</p>
-      <button>Shop now</button>
-    </section>
-
-    <!-- Flavours/ Products -->
-
-    <section id="product1" class="section-p1">
-      <h2>Flavours of ZIMA ENERGY DRINK</h2>
-      <p>Collection that you wish for</p>
-      <div class="pro-container">
-        <div class="pro">
-          <img src="images/original.jpg" alt="product image" />
-          <div class="des">
-            <span>Original</span>
-            <h5>ZIMA Original Flavour Drink</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$185</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+    <div class="container">
+      <section id="hero">
+        <div class="hero-title">
+          <h1>ZIMA ENERGY</h1>
         </div>
-
-        <div class="pro">
-          <img src="images/grapes.jpg" alt="product image" />
-          <div class="des">
-            <span>Grape Delight</span>
-            <h5>ZIMA grape Flavour Drink</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$185</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        <div class="hero-text">
+          <h2>Fuel your Energy - Fuel your Potential</h2>
         </div>
-
-        <div class="pro">
-          <img src="images/orange.jpg" alt="product image" />
-          <div class="des">
-            <span>Orange Punch</span>
-            <h5>ZIMA Orange Flavour Drink</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$185</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        <div class="hero-button">
+          <button>Let’s get started</button>
         </div>
+      </section>
+    </div>
 
-        <div class="pro">
-          <img src="images/lemon.jpg" alt="product image" />
-          <div class="des">
-            <span>Lemon Spark</span>
-            <h5>ZIMA lemon Flavour Drink</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$185</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+    <div class="col-start-2 col-end-4 m-col-span-4" id="why-zima">
+      <h2 class="hidden">Why Zima</h2>
+      <div class="why-zima-content">
+        <div class="why-zima-text">
+          <p>ZIMA Energy</p>
+          <h2>What's so Special</h2>
+          <p>
+            At Zima, we believe in the power of relentless energy and
+            unstoppable momentum. <br />
+            Our energy drinks are crafted to give you the boost you need to
+            conquer your day
+          </p>
+          <ul>
+            <li><a href="#">Superior Ingredients</a></li>
+            <li><a href="#">Delicious Flavors</a></li>
+            <li><a href="#">Optimal Performance</a></li>
+            <li><a href="#">Perfect Energy Drink</a></li>
+          </ul>
         </div>
-
-        <div class="pro">
-          <img src="images/melon.jpg" alt="product image" />
-          <div class="des">
-            <span>Melon Splash</span>
-            <h5>ZIMA Melon Flavour Drink</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$185</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="images/grapes.jpg" alt="product image" />
-          <div class="des">
-            <span>Grape Delight</span>
-            <h5>ZIMA grape Flavour Drink</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$185</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        <div class="why-zima-image col-span-full">
+          <img src="images/right-hero-image.png" alt="ZimaCanPoster" />
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
+    <div class="col-span-full" id="exclusive-flavours">
+      <h2 class="hidden">Exclusive Flavours</h2>
+      <div class="flavours-content">
+        <div class="flavours-content-text">
+          <h2>Featured Products</h2>
+          <h3>Discover our range of Diverse Energy Drinks</h3>
+        </div>
+
+        <div class="box1">
+          <img src="images/original.jpg" alt="pic 1" class="box_img" />
+        </div>
+
+        <div class="box2">
+          <img src="images/grapes.jpg" alt="pic 2" class="box_img" />
+        </div>
+
+        <div class="box3">
+          <img src="images/orange.jpg" alt="pic 3" class="box_img" />
+        </div>
+      </div>
+      <div class="view-button col-span-full">
+        <section id="view-more">
+          <button>View More Flavours</button>
+        </section>
+      </div>
+    </div>
+
+    <div class="grid-con">
+      <div class="col-span-full">
+        <div id="slider-container">
+          <div class="gallery-text">
+            <h2>Gallery</h2>
+            <h3>Experience the ZIMA lifestyle</h3>
+          </div>
+          <div id="image-slider">
+            <img
+              class="slider-image"
+              src="images/gallery-can-1.png"
+              alt="Zima in the gym"
+            />
+            <img
+              class="slider-image"
+              src="images/gallery-can-2.png"
+              alt="Zima with volleyball"
+            />
+            <img
+              class="slider-image"
+              src="images/gallery-can-3.png"
+              alt="Drinking Zima"
+            />
+          </div>
+          <button id="prev-btn">&#10094;</button>
+          <button id="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <video class="col-span-full" controls>
+        <source src="video/video.mp4" type="video/mp4" />
+        <p>Your browser does not support the video tag.</p>
+      </video>
+    </div>
+
+    <div class="signup-container">
+      <h2>Get Access to Members Only</h2>
+      <p>
+        Sign up for our newsletter below to get $10 off your first personal
+        favourite flavor
+      </p>
+      <form class="signup-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
 
     <footer class="section-p1">
       <div class="col">
-        <img class="logo" src="images/zima logo.svg" height="80px" alt="" />
+        <img class="logo" src="images/zima logo.svg" height="80px" alt="logo" />
         <h4>Contact Us</h4>
         <p>
           <strong>Address: </strong>562 Dundas Street, Street 32. London,
@@ -189,6 +186,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
