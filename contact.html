@@ -29,41 +29,67 @@
       </div>
     </header>
 
-    <!-- Contact page-->
-
-    <div id="contact-hero-image" class="col-span-full">
-      <section class="grid-con">
-        <h1>Contact Information</h1>
-        <section id="contact-hero-text" class="line-separator col-span-full">
-          <h2>How Can We Help?</h2>
-        </section>
-
-        <form action="#" method="post" enctype="text/plain">
-          <p>Full Name</p>
-          <input
-            name="fullName"
-            type="text"
-            required
-            placeholder="First & Last Name"
-          />
-          <p>Phone number</p>
-          <input
-            name="contactInfo"
-            type="text"
-            required
-            placeholder="Phone number"
-          />
-          <p>Email</p>
-          <input name="contactInfo" type="text" required placeholder="Email" />
-          <p>Your Inquiry</p>
-          <textarea
-            name="msg"
-            placeholder="Enter your questions, comments or concerns here..."
-          ></textarea>
-          <button>submit</button>
-        </form>
-      </section>
-    </div>
+    <section class="contact-section">
+      <div class="container-contact">
+        <div class="heading">
+          <h1>
+            Tell us more<br />
+            <p><em>How Can We Help?</em></p>
+          </h1>
+        </div>
+        <div class="content">
+          <div class="left">
+            <h2>Fill out the form below</h2>
+            <form>
+              <label for="first-name">Name <span>(required)</span></label>
+              <div class="name-fields">
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="First Name"
+                  required
+                />
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <label for="email">Email Address <span>(required)</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <label for="subject">Subject <span>(required)</span></label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+              <label for="message">Message <span>(required)</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button type="submit">SUBMIT</button>
+            </form>
+          </div>
+          <div class="right">
+            <img src="images/contact-image.jpg" alt="Contact Image" />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
 
