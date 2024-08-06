@@ -3,186 +3,189 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/grid.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <title>Zima Energy</title>
+    <title>ZIMA Energy</title>
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-
   <body>
-    <!-- Main Nav -->
-    <div id="sticky-nav-con">
-      <header id="header">
-        <div class="grid-con" id="main-header">
-          <nav id="main-nav" class="col-span-full m-col-start-4 m-col-end-11">
+    <header id="header" class="col-span-full m-col-start-1 m-col-end-4">
+      <a href="#">
+        <img
+          src="images/zima logo.svg"
+          height="80px"
+          class="logo"
+          alt="hero image"
+        />
+      </a>
+      <div id="sticky-nav-con">
+        <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-            <div>
-              <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-
-            <div id="logo" class="col-span-full m-col-start-1 m-col-end-4">
-              <img src="images/Zima_logo copy.png" alt="Zima Logo">
-            </div>
-          </nav>
+    <div class="container">
+      <section id="hero">
+        <div class="hero-title">
+          <h1>ZIMA ENERGY</h1>
         </div>
-      </header>
+        <div class="hero-text">
+          <h2>Fuel your Energy - Fuel your Potential</h2>
+        </div>
+        <div class="hero-button">
+          <button>Let’s get started</button>
+        </div>
+      </section>
     </div>
 
+    <div class="col-start-2 col-end-4 m-col-span-4" id="why-zima">
+      <h2 class="hidden">Why Zima</h2>
+      <div class="why-zima-content">
+        <div class="why-zima-text">
+          <p>ZIMA Energy</p>
+          <h2>What's so Special</h2>
+          <p>
+            At Zima, we believe in the power of relentless energy and
+            unstoppable momentum. <br />
+            Our energy drinks are crafted to give you the boost you need to
+            conquer your day
+          </p>
+          <ul>
+            <li><a href="#">Superior Ingredients</a></li>
+            <li><a href="#">Delicious Flavors</a></li>
+            <li><a href="#">Optimal Performance</a></li>
+            <li><a href="#">Perfect Energy Drink</a></li>
+          </ul>
+        </div>
+        <div class="why-zima-image col-span-full">
+          <img src="images/right-hero-image.png" alt="ZimaCanPoster" />
+        </div>
+      </div>
+    </div>
 
-             <!-- Main Hero -->
-        <section id="hero" class="full-width-grid-con">
-            <h2 class="hidden">Zima Product </h2>
-            <img
-            sizes="(max-width: 930px) 100vw, 930px"
-                srcset="
-                images/Poster_5_yrq3gh_c_scale,w_170.png 170w,
-                images/Poster_5_yrq3gh_c_scale,w_286.png 286w,
-                images/Poster_5_yrq3gh_c_scale,w_378.png 378w,
-                images/Poster_5_yrq3gh_c_scale,w_458.png 458w,
-                images/Poster_5_yrq3gh_c_scale,w_527.png 527w,
-                images/Poster_5_yrq3gh_c_scale,w_590.png 590w,
-                images/Poster_5_yrq3gh_c_scale,w_652.png 652w,
-                images/Poster_5_yrq3gh_c_scale,w_712.png 712w,
-                images/Poster_5_yrq3gh_c_scale,w_765.png 765w,
-                images/Poster_5_yrq3gh_c_scale,w_816.png 816w,
-                images/Poster_5_yrq3gh_c_scale,w_866.png 866w,
-                images/Poster_5_yrq3gh_c_scale,w_915.png 915w,
-                images/Poster_5_yrq3gh_c_scale,w_930.png 930w"
-                src=" images/Poster_5_yrq3gh_c_scale,w_930.png"
-                alt="hero-image">
+    <div class="col-span-full" id="exclusive-flavours">
+      <h2 class="hidden">Exclusive Flavours</h2>
+      <div class="flavours-content">
+        <div class="flavours-content-text">
+          <h2>Featured Products</h2>
+          <h3>Discover our range of Diverse Energy Drinks</h3>
+        </div>
 
-            <div class="grid-con">
-                <div class="col-span-full m-col-start-2 m-col-end-12 line-separator"></div>
-                <div class="col-span-full m-col-span-4 products-image-con" id="product_grapes">
-                    <div class="flavours">
-                        <img
-            sizes="(max-width: 3840px) 100vw, 3840px"
-            srcset="
-            images/grapes_ovgjku_c_scale,w_170.jpg 170w,
-            images/grapes_ovgjku_c_scale,w_785.jpg 785w,
-            images/grapes_ovgjku_c_scale,w_1136.jpg 1136w,
-            images/grapes_ovgjku_c_scale,w_1480.jpg 1480w,
-            images/grapes_ovgjku_c_scale,w_1806.jpg 1806w,
-            images/grapes_ovgjku_c_scale,w_2086.jpg 2086w,
-            images/grapes_ovgjku_c_scale,w_2463.jpg 2463w,
-            images/grapes_ovgjku_c_scale,w_2816.jpg 2816w,
-            images/grapes_ovgjku_c_scale,w_3078.jpg 3078w,
-            images/grapes_ovgjku_c_scale,w_3343.jpg 3343w,
-            images/grapes_ovgjku_c_scale,w_3441.jpg 3441w,
-            images/grapes_ovgjku_c_scale,w_3604.jpg 3604w,
-            images/grapes_ovgjku_c_scale,w_3840.jpg 3840w"
-            src=" images/grapes_ovgjku_c_scale,w_3840.jpg"
-            alt="grapes">
-                    </div>
-                    <h2>Our Drinks</h2>
-                    <p>Drinks on Demand </p>
-                    
-                    <a href="#">CLICK TO LEARN MORE...</a>
-                </div>
+        <div class="box1">
+          <img src="images/original.jpg" alt="pic 1" class="box_img" />
+        </div>
 
-                <div class="show-hide col-span-full m-col-span-4 " id="product_lemon">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/lemon_bhcjmc_c_scale,w_190.jpg 190w,
-                        images/lemon_bhcjmc_c_scale,w_924.jpg 924w,
-                        images/lemon_bhcjmc_c_scale,w_1361.jpg 1361w,
-                        images/lemon_bhcjmc_c_scale,w_1783.jpg 1783w,
-                        images/lemon_bhcjmc_c_scale,w_2308.jpg 2308w,
-                        images/lemon_bhcjmc_c_scale,w_2690.jpg 2690w,
-                        images/lemon_bhcjmc_c_scale,w_3061.jpg 3061w,
-                        images/lemon_bhcjmc_c_scale,w_3388.jpg 3388w,
-                        images/lemon_bhcjmc_c_scale,w_3538.jpg 3538w,
-                        images/lemon_bhcjmc_c_scale,w_3840.jpg 3840w"
-                        src="images/lemon_bhcjmc_c_scale,w_3840.jpg"
-                        alt="lemon">
-                    </div>
-                </div>
+        <div class="box2">
+          <img src="images/grapes.jpg" alt="pic 2" class="box_img" />
+        </div>
 
-                <div class="show-hide col-span-full m-col-span-4 " id="product_melon">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/melon_oabvp5_c_scale,w_190.jpg 190w,
-                        images/melon_oabvp5_c_scale,w_718.jpg 718w,
-                        images/melon_oabvp5_c_scale,w_1567.jpg 1567w,
-                        images/melon_oabvp5_c_scale,w_1713.jpg 1713w,
-                        images/melon_oabvp5_c_scale,w_1850.jpg 1850w,
-                        images/melon_oabvp5_c_scale,w_2687.jpg 2687w,
-                        images/melon_oabvp5_c_scale,w_3170.jpg 3170w,
-                        images/melon_oabvp5_c_scale,w_3347.jpg 3347w,
-                        images/melon_oabvp5_c_scale,w_3529.jpg 3529w,
-                        images/melon_oabvp5_c_scale,w_3840.jpg 3840w"
-                        src="images/melon_oabvp5_c_scale,w_3840.jpg"
-                        alt="melon">
-                    </div>
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4" id="orange">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/orange_rul5qw_c_scale,w_190.jpg 190w,
-                        images/orange_rul5qw_c_scale,w_902.jpg 902w,
-                        images/orange_rul5qw_c_scale,w_1338.jpg 1338w,
-                        images/orange_rul5qw_c_scale,w_1779.jpg 1779w,
-                        images/orange_rul5qw_c_scale,w_2199.jpg 2199w,
-                        images/orange_rul5qw_c_scale,w_2679.jpg 2679w,
-                        images/orange_rul5qw_c_scale,w_3057.jpg 3057w,
-                        images/orange_rul5qw_c_scale,w_3345.jpg 3345w,
-                        images/orange_rul5qw_c_scale,w_3532.jpg 3532w,
-                        images/orange_rul5qw_c_scale,w_3840.jpg 3840w"
-                        src="images/orange_rul5qw_c_scale,w_3840.jpg"
-                        alt="orange">
-                    </div>
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4" id="oringal">
-                    <div class="flavours">
-                        <img
-                        sizes="(max-width: 3840px) 100vw, 3840px"
-                        srcset="
-                        images/poster_2_yrwbxz_c_scale,w_190.jpg 190w,
-                        images/poster_2_yrwbxz_c_scale,w_1051.jpg 1051w,
-                        images/poster_2_yrwbxz_c_scale,w_1556.jpg 1556w,
-                        images/poster_2_yrwbxz_c_scale,w_1968.jpg 1968w,
-                        images/poster_2_yrwbxz_c_scale,w_2373.jpg 2373w,
-                        images/poster_2_yrwbxz_c_scale,w_2715.jpg 2715w,
-                        images/poster_2_yrwbxz_c_scale,w_3074.jpg 3074w,
-                        images/poster_2_yrwbxz_c_scale,w_3387.jpg 3387w,
-                        images/poster_2_yrwbxz_c_scale,w_3617.jpg 3617w,
-                        images/poster_2_yrwbxz_c_scale,w_3840.jpg 3840w"
-                        src="images/poster_2_yrwbxz_c_scale,w_3840.jpg"
-                        alt="orginal">
-                </div>
-            </div>
-            </div>
-            <section id="banner" class="section-follow-us">
-                <h2>Follow Us <br>
-                    &amp Join  </h2>
-            </section>
-        
-     
-         <footer id="footer-hero" class="grid-con">
-                <section id="footer-contact-info" class="col-span-full">
-                    <h3>Zima</h3>
-                    <p>130 Dundas St, London, ON N6A 1G2<br>
-                        <p>Tel:1-555-KING-225 (558 589)</p>
-                    </p>
-                   
-                </section>
-                <div id="footer-privacy" class="col-span-full line-separator">
-                    <p id="privacy_policy"> ©ZimaEnergy All Rights Reserved. Privacy Policy </p>
-                </div>
-        </footer>
+        <div class="box3">
+          <img src="images/orange.jpg" alt="pic 3" class="box_img" />
+        </div>
+      </div>
+      <div class="view-button col-span-full">
+        <section id="view-more">
+          <button>View More Flavours</button>
         </section>
-    </body>
+      </div>
+    </div>
 
+    <div class="grid-con">
+      <div class="col-span-full">
+        <div id="slider-container">
+          <div class="gallery-text">
+            <h2>Gallery</h2>
+            <h3>Experience the ZIMA lifestyle</h3>
+          </div>
+          <div id="image-slider">
+            <img
+              class="slider-image"
+              src="images/gallery-can-1.png"
+              alt="Zima in the gym"
+            />
+            <img
+              class="slider-image"
+              src="images/gallery-can-2.png"
+              alt="Zima with volleyball"
+            />
+            <img
+              class="slider-image"
+              src="images/gallery-can-3.png"
+              alt="Drinking Zima"
+            />
+          </div>
+          <button id="prev-btn">&#10094;</button>
+          <button id="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <video class="col-span-full" controls>
+        <source src="video/video.mp4" type="video/mp4" />
+        <p>Your browser does not support the video tag.</p>
+      </video>
+    </div>
+
+    <div class="signup-container">
+      <h2>Get Access to Members Only</h2>
+      <p>
+        Sign up for our newsletter below to get $10 off your first personal
+        favourite flavor
+      </p>
+      <form class="signup-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="images/zima logo.svg" height="80px" alt="logo" />
+        <h4>Contact Us</h4>
+        <p>
+          <strong>Address: </strong>562 Dundas Street, Street 32. London,
+          Ontario
+        </p>
+        <p><strong>Phone: </strong> +01 2222 365/ +01 2222 365</p>
+        <p><strong>Hourclasss: </strong> 10:00 - 18:00 Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Contact us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track my order</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
