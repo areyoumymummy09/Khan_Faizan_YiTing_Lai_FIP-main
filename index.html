@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="off-screen-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="zima-product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <nav>
+      <a href="#">
+        <img
+          src="images/zima logo.svg"
+          height="80px"
+          class="logo"
+          alt="hero image"
+        />
+      </a>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <h1 class="hidden">ZIMA Energy</h1>
+    <!--Main Nav-->
     <header id="header" class="col-span-full m-col-start-1 m-col-end-4">
       <a href="#">
         <img
@@ -18,20 +44,19 @@
         />
       </a>
       <div id="sticky-nav-con">
+        <!-- <ul id="navbar"> -->
         <ul id="navbar">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li id="lg-bag">
-            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-          </li>
+          <li class="currentPage"><a href="index.html">Home</a></li>
+          <li class="Underline"><a href="#">About Us</a></li>
+          <li class="Underline"><a href="zima-product.html">Product</a></li>
+          <li class="Underline"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </header>
 
     <div class="container">
-      <section id="hero">
+      <div>
+        <img src="./images/cover-page.png" alt="hero image" />
         <div class="hero-title">
           <h1>ZIMA ENERGY</h1>
         </div>
@@ -39,9 +64,9 @@
           <h2>Fuel your Energy - Fuel your Potential</h2>
         </div>
         <div class="hero-button">
-          <button>Let’s get started</button>
+          <button style="height: 50px">Let’s get started</button>
         </div>
-      </section>
+      </div>
     </div>
 
     <div class="col-start-2 col-end-4 m-col-span-4" id="why-zima">
@@ -78,15 +103,30 @@
         </div>
 
         <div class="box1">
-          <img src="images/original.jpg" alt="pic 1" class="box_img" />
+          <img
+            src="images/original.jpg"
+            alt="Original Flavor"
+            class="box_img"
+            data-flavor-index="0"
+          />
         </div>
 
         <div class="box2">
-          <img src="images/grapes.jpg" alt="pic 2" class="box_img" />
+          <img
+            src="images/grapes.jpg"
+            alt="Grapes Flavor"
+            class="box_img"
+            data-flavor-index="1"
+          />
         </div>
 
         <div class="box3">
-          <img src="images/orange.jpg" alt="pic 3" class="box_img" />
+          <img
+            src="images/orange.jpg"
+            alt="Orange Flavor"
+            class="box_img"
+            data-flavor-index="2"
+          />
         </div>
       </div>
       <div class="view-button col-span-full">
@@ -94,6 +134,16 @@
           <button>View More Flavours</button>
         </section>
       </div>
+    </div>
+
+    <!-- Lightbox Structure -->
+    <div class="lightbox" id="flavor-lightbox">
+      <a href="" class="lightbox_close">x</a>
+
+      <article>
+        <h3 class="lb_heading">Flavor Name</h3>
+        <p class="lb_text">Flavor Description</p>
+      </article>
     </div>
 
     <div class="grid-con">
@@ -128,7 +178,7 @@
 
     <div class="video-container">
       <video class="col-span-full" controls>
-        <source src="video/video.mp4" type="video/mp4" />
+        <source src="video/zim_outro_with_audio.mp4" type="video/mp4" />
         <p>Your browser does not support the video tag.</p>
       </video>
     </div>
@@ -139,10 +189,10 @@
         Sign up for our newsletter below to get $10 off your first personal
         favourite flavor
       </p>
-      <form class="signup-form">
+      <div id="signup-form-div">
         <input type="email" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
-      </form>
+      </div>
     </div>
 
     <footer class="section-p1">
@@ -179,13 +229,11 @@
       <div class="col">
         <h4>My Account</h4>
         <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track my order</a>
         <a href="#">Help</a>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
