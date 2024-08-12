@@ -1078,6 +1078,46 @@ button:hover {
   }
 }
 
+@media (max-width: 530px) {
+  .container-contact {
+    padding: 10px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-fields {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .name-fields input {
+    width: 100%;
+    margin-bottom: 10px; /* Add space between fields */
+  }
+
+  .contact-section button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Adjust any other elements that need to be responsive */
+  .left,
+  .right {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .left img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /*Product Page*/
 #product1 {
   text-align: center;
