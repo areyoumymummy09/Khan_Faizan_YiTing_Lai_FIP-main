@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* Nav bar */
-
 #header {
   display: flex;
   align-items: center;
@@ -9,16 +8,27 @@
   padding: 20px 80px;
   background: #d6df28;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  z-index: 999;
+  z-index: 1000;
+  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
+}
+
+#sticky-nav-con {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #navbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #navbar li {
@@ -36,20 +46,68 @@
   transition: 0.3s ease;
 }
 
-#navbar li a:hover,
+/* #navbar li a:hover,
 #navbar li a.active {
   font-weight: 900;
+} */
+
+.Underline:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+.currentPage {
+  text-decoration: underline;
+  text-underline-offset: 7px;
 }
 
-#navbar li a.active::after,
-#navbar li a:hover::after {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
+/* Main Nav */
+#main-nav button {
+  width: 20px;
+  height: 20px;
+  background: url(../images/burger.svg) no-repeat center;
+  margin-top: 15px;
+  transition: all 0.5s ease;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+#main-nav button.expanded {
+  transform: rotate(90deg);
+}
+
+#burger-con {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+#burger-con.slide-toggle {
+  display: block;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  color: #000;
+}
+
+#main-nav ul li {
+  border-bottom: 1px solid #efefef;
+}
+
+#main-nav ul li:first-child {
+  border-top: 1px solid #efefef;
+}
+
+#main-nav ul li:last-child {
+  margin-bottom: 10px;
 }
 
 #mobile {
@@ -62,8 +120,8 @@
 }
 
 /* Hero image */
-
-/*#hero {
+/*
+#hero {
   background-size: cover;
   height: 90vh;
   width: 90%;
@@ -76,14 +134,19 @@
 }
 */
 
+/**/
 .container {
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   width: 100%;
-  height: 500px;
-  margin: 0 auto;
-  background-image: url("../images/cover-page.png");
+  height: 100%;
+}
+.container img {
+  top: 0;
+  left: 0;
+  z-index: 1; /* Image behind all elements */
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #hero {
@@ -93,39 +156,95 @@
   color: white;
 }
 
-.container .hero-title {
+.hero-title {
   position: absolute;
-  top: 120px;
-  left: 15%;
-  width: 1000px;
-  height: 100px;
+  top: 35%;
+  left: 10%;
+  z-index: 2; /* Above the image */
   color: black;
   animation: leftOne 2s ease-out forwards;
 }
 
-.container .hero-text {
+.hero-text {
   position: absolute;
-  top: 50%;
-  width: 700px;
-  height: 100px;
-  left: 15%;
   opacity: 0;
+  top: 60%;
+  left: 10%;
+  z-index: 2; /* Above the image */
   color: black;
-  animation: leftTwo 4s ease-out 3s forwards;
+  animation: leftTwo 1s ease-out 1s forwards;
 }
 
-.container .hero-button {
+.hero-button {
   position: absolute;
-  top: 40%;
-  width: 700px;
-  height: 100px;
-  left: 15%;
+  top: 70%;
+  left: 10%;
+  z-index: 2; /* Above the image */
+  transition: all 0.5s ease-in-out;
+  color: white;
+  border: none;
+  padding: 0px 20px 20px 50px;
+  cursor: pointer;
 }
-
-#hero button:hover {
-  background-color: rgb(255, 15, 15);
+*/ #hero button:hover {
   color: black;
   cursor: pointer;
+  box-shadow: inset 0px -120px 0px #de3274;
+}
+
+@keyframes leftOnemobile {
+  0% {
+    width: 20%;
+    height: 120px;
+    left: -300px;
+    opacity: 0;
+  }
+  25% {
+    left: 5%;
+    opacity: 0.5;
+  }
+  50% {
+    width: 20%;
+    height: 120px;
+    left: 5%;
+    opacity: 0.5;
+  }
+  70% {
+    width: 20%;
+    height: 120px;
+    opacity: 0.5;
+    left: 5%;
+    font-size: 50px;
+  }
+
+  100% {
+    width: 20%;
+    height: 120px;
+    opacity: 1;
+    left: 5%;
+    font-size: 50px;
+  }
+}
+
+@keyframes leftTwomobile {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    left: 5%;
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 1;
+    left: 5%;
+    font-size: 25px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 5%;
+    font-size: 25px;
+  }
 }
 
 @keyframes leftOne {
@@ -192,10 +311,18 @@
   grid-row: 1/-1;
   justify-self: center;
 }
+.grid-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px; /* Adjust padding if needed */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
 
 #hero .grid-con {
   /* sit in the middle of the 3 column grid */
-  grid-column: 2/3;
+  grid-column: 3/3;
   /* stay in the top row, so it overalps the image */
   grid-row: 1/1;
   /* get rid of any margin from original .grid-con class */
@@ -260,7 +387,7 @@
   flex-direction: column;
   align-items: center;
   margin-left: 150px;
-  background-image: url(/images/right-heroImg-bkgd.png);
+  background-image: url(../images/right-heroImg-bkgd.png);
 }
 
 .why-zima-image img {
@@ -433,7 +560,7 @@
 
 .box_img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -443,16 +570,16 @@
     gap: 10px;
   }
 
-  .flavours-content-text {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
   .box1,
   .box2,
   .box3 {
-    grid-column: 1 / -1;
+    width: 100%; /* Ensure the boxes take full width on smaller screens */
     height: auto;
+  }
+
+  .flavours-content-text {
+    grid-column: 1 / -1;
+    text-align: center;
   }
 }
 /* Gallergy Slider*/
@@ -530,7 +657,23 @@
   height: auto;
 }
 
-/*signup form */
+/*Signup Form*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+#signup-form-div {
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
 
 .signup-container {
   background-color: #d6df28;
@@ -543,33 +686,37 @@
 .signup-container h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: black;
 }
 
 .signup-container p {
   font-size: 16px;
   margin-bottom: 20px;
+  color: black;
 }
 
 .signup-form {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  margin-right: 20px;
+  gap: 10px;
 }
 
 .signup-form input[type="email"] {
   padding: 10px;
   font-size: 16px;
   border: none;
-  border-radius: 5px 0 0 5px;
-  width: 300px;
+  border-radius: 5px 5px;
+  border: 1px solid #cce7d0;
+  width: 500px;
+  margin-right: 20px;
   max-width: 100%;
 }
 
 .signup-form button {
-  padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 0 5px 5px 0;
   background-color: black;
   color: white;
   cursor: pointer;
@@ -578,6 +725,226 @@
 .signup-form button:hover {
   background-color: #333;
 }
+
+/*Zima Product Page*/
+
+.product-display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.product-hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.product-hero-text {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#product-hero-text p {
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.product-hero-text h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.product-hero-text button {
+  margin-top: 20px;
+}
+
+.orange-box,
+.grapes-box,
+.original-box,
+.melon-box,
+.lemon-box {
+  position: relative;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: black;
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+}
+
+.right-box {
+  position: relative;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: black;
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  transform: translateY(130px);
+}
+
+@media (max-width: 799px) {
+  .product-display {
+    all: revert;
+    display: grid;
+  }
+  .right-box {
+    all: revert;
+    transform: translateY(0);
+  }
+}
+
+.orange-box:hover,
+.grapes-box:hover,
+.original-box:hover,
+.melon-box:hover,
+.lemon-box:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+.product-hero-container button:hover {
+  background-color: red;
+}
+
+.original-box img {
+  width: 100%;
+  height: auto;
+}
+
+.orange-box img {
+  width: 100%;
+  height: auto;
+}
+
+.orange-box {
+  position: relative;
+}
+
+.grapes-box img {
+  width: 100%;
+  height: auto;
+}
+
+.grapes-box {
+  position: relative;
+}
+
+.melon-box img {
+  width: 100%;
+  height: auto;
+}
+
+.melon-box {
+  position: relative;
+}
+
+.lemon-box img {
+  width: 100%;
+  height: auto;
+}
+
+.lemon-box {
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; */
+}
+
+.image-overlay img {
+  width: 100%;
+  height: auto;
+}
+
+.foreground {
+  position: relative;
+  z-index: 2;
+  margin-top: 13%;
+}
+
+.foreground img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  position: relative;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text h1 {
+  font-size: 48px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.text p {
+  font-size: 16px;
+  color: #000000;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Add some space between the title and the text/button */
+}
+
+.text button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.text button:hover {
+  background-color: #555;
+}
+.text:hover {
+  background-color: #efefef;
+}
+
 /*Contact page*/
 
 .contact-section {
@@ -592,12 +959,19 @@
 .heading {
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .heading h1 {
   font-size: 48px;
   color: black;
   margin-bottom: 10px;
+}
+.heading h2 {
+  font-size: 25px;
+  color: black;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .heading p {
@@ -623,8 +997,8 @@
 .right {
   display: flex;
   flex-direction: column;
-  max-width: 600px; /* Adjust the form width */
-  margin: 0 auto; /* Center the form within the right div */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .right h2 {
@@ -700,7 +1074,7 @@ button:hover {
 
   .right {
     margin-top: 20px;
-    max-width: 100%; /* Ensure the form is full width on smaller screens */
+    max-width: 100%;
   }
 }
 
@@ -869,4 +1243,292 @@ footer a:hover {
   footer .col {
     align-items: center;
   }
+}
+
+/* ---Tablet Library Grid Styles--- */
+@media (max-width: 768px) {
+  /* make the pic go down */
+  .why-zima-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-zima-image {
+    margin-top: 20px; /* Add some spacing between the text and the image */
+    width: 100%; /* Ensure the image scales properly */
+    text-align: center; /* Center the image */
+  }
+  .why-zima-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  #sticky-nav-con {
+    position: sticky;
+    top: 0px;
+    justify-content: right;
+    z-index: 1;
+  }
+
+  #main-nav {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    justify-content: right;
+  }
+
+  #main-nav ul li a {
+    display: inline;
+  }
+
+  #burger-con {
+    display: block;
+    font-size: 12px;
+  }
+
+  #burger-con ul li,
+  #burger-con ul li:first-child {
+    border: none;
+    display: inline;
+  }
+
+  #burger-con ul li {
+    margin-right: 10px;
+  }
+
+  #burger-con ul li:last-child {
+    margin-right: 0px;
+  }
+
+  #logo {
+    margin-top: 32px;
+    order: -1;
+  }
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+  background-color: #d6df28;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3s ease;
+  z-index: 4;
+}
+.off-screen-menu ul {
+  list-style-type: none;
+}
+.off-screen-menu.active {
+  right: 0;
+}
+
+/* nav */
+nav {
+  display: none;
+}
+@media (max-width: 1325px) {
+  .hero-title {
+    top: 30%;
+  }
+  .hero-text {
+    top: 50%;
+  }
+  .hero-button {
+    top: 60%;
+  }
+  .flavours-content-text,
+  .box3 {
+    grid-column: 2 / -3;
+    height: auto;
+  }
+}
+@keyframes moveElement {
+  100% {
+    opacity: 1;
+    left: 15%;
+    font-size: 40px;
+  }
+}
+@media (max-width: 1088px) {
+  .hero-title {
+    top: 25%;
+    animation: moveElement 2s ease-out forwards;
+  }
+  .hero-text {
+    top: 40%;
+  }
+  .hero-button {
+    top: 50%;
+  }
+}
+@media (max-width: 880px) {
+  .why-zima-image {
+    margin-left: 0px;
+    height: auto;
+  }
+  .view-button,
+  .box1,
+  .box2,
+  .box3 {
+    grid-column: 3 / -3;
+    height: auto;
+  }
+  .hero-text {
+    top: 55%;
+    animation: leftTwomobile 1s ease-out 1s forwards;
+  }
+  .hero-button {
+    top: 70%;
+    left: -2%;
+    border: none;
+    cursor: pointer;
+  }
+  .container img {
+    content: url("../images/cover-page\(mobile\).png");
+  }
+  .hero-title {
+    top: 20%;
+    animation: leftOnemobile 2s ease-out forwards;
+  }
+
+  #header {
+    display: none;
+  }
+  nav img {
+    margin-left: 20%;
+  }
+  nav {
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 100; /* Ensure it stays on top of other elements */
+    width: 100%;
+    padding: 1rem;
+    position: sticky;
+    background-color: #d6df28;
+  }
+
+  .ham-menu {
+    display: block; /* show the hamburger menu */
+  }
+}
+
+@media (max-width: 634px) {
+  .hero-title {
+    top: 15%;
+  }
+
+  .hero-text {
+    top: 45%;
+  }
+  .hero-button {
+    top: 58%;
+  }
+}
+
+@media (max-width: 477px) {
+  .hero-text {
+    top: 30%;
+  }
+  .hero-button {
+    top: 42%;
+  }
+}
+
+/* ham menu */
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  z-index: 4;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.ham-menu.active span {
+  background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* lightbox*/
+
+/* Lightbox styling */
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(105, 105, 105, 0.85);
+  background-image: url("../images/melon-frame.png");
+  background-repeat: no-repeat;
+
+  background-size: 40vh;
+  background-position: 40px bottom;
+
+  z-index: 5000;
+
+  display: none;
+}
+
+.lightbox article {
+  background: #c3c3c3;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.lb_image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.lightbox_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.lightbox_close:hover {
+  opacity: 0.5;
+  color: red;
 }
