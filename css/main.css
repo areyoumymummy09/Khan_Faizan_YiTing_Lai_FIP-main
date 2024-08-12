@@ -1,5 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+.ibm-plex-sans-thin {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-sans-extralight {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-sans-light {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-medium {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-semibold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-sans-bold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thin-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.ibm-plex-sans-extralight-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.ibm-plex-sans-light-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ibm-plex-sans-regular-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ibm-plex-sans-medium-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ibm-plex-sans-semibold-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ibm-plex-sans-bold-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* Nav bar */
 #header {
   display: flex;
@@ -118,21 +202,6 @@
 #close {
   display: none;
 }
-
-/* Hero image */
-/*
-#hero {
-  background-size: cover;
-  height: 90vh;
-  width: 90%;
-  background-position: top 25% right 0;
-  padding: 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-*/
 
 /**/
 .container {
@@ -369,6 +438,36 @@
   font-size: 15px;
   font-weight: 700;
 }
+/*Zima List colour */
+.zima-list li {
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+.zima-list li:nth-child(1):hover {
+  color: #d6df28;
+}
+
+.zima-list li:nth-child(2):hover {
+  color: #ff810a;
+}
+
+.zima-list li:nth-child(3):hover {
+  color: #f02d98;
+}
+
+.zima-list li:nth-child(4):hover {
+  color: #35ff1f;
+}
+
+.zima-list li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.zima-list li a:hover {
+  opacity: 0.8;
+}
 
 #why-zima {
   display: flex;
@@ -415,11 +514,12 @@
   text-align: left;
 }
 
+/* Remove the color property from this rule to avoid overriding */
 .why-zima-text ul li a {
   text-decoration: dotted;
-  color: #000;
   font-weight: bold;
 }
+
 .view-button {
   position: relative;
   display: flex;
@@ -876,11 +976,6 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box; */
 }
 
 .image-overlay img {
@@ -897,6 +992,11 @@ body {
 .foreground img {
   width: 100%;
   height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.foreground:hover img {
+  transform: rotate(-15deg);
 }
 
 .text {
