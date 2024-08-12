@@ -1,87 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-.ibm-plex-sans-thin {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.ibm-plex-sans-extralight {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.ibm-plex-sans-light {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.ibm-plex-sans-regular {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.ibm-plex-sans-medium {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.ibm-plex-sans-semibold {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.ibm-plex-sans-bold {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ibm-plex-sans-thin-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.ibm-plex-sans-extralight-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.ibm-plex-sans-light-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.ibm-plex-sans-regular-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.ibm-plex-sans-medium-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.ibm-plex-sans-semibold-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.ibm-plex-sans-bold-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", "Arial", serif;
+  background-color: #f0f0f0;
+  font-size: medium;
 }
 
 /* Nav bar */
@@ -129,11 +53,6 @@
   color: #1a1a1a;
   transition: 0.3s ease;
 }
-
-/* #navbar li a:hover,
-#navbar li a.active {
-  font-weight: 900;
-} */
 
 .Underline:hover {
   text-decoration: underline;
@@ -212,7 +131,7 @@
 .container img {
   top: 0;
   left: 0;
-  z-index: 1; /* Image behind all elements */
+  z-index: 1;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -239,7 +158,7 @@
   opacity: 0;
   top: 60%;
   left: 10%;
-  z-index: 2; /* Above the image */
+  z-index: 2;
   color: black;
   animation: leftTwo 1s ease-out 1s forwards;
 }
@@ -248,14 +167,14 @@
   position: absolute;
   top: 70%;
   left: 10%;
-  z-index: 2; /* Above the image */
+  z-index: 2;
   transition: all 0.5s ease-in-out;
   color: white;
   border: none;
   padding: 0px 20px 20px 50px;
   cursor: pointer;
 }
-*/ #hero button:hover {
+#hero button:hover {
   color: black;
   cursor: pointer;
   box-shadow: inset 0px -120px 0px #de3274;
@@ -398,16 +317,6 @@
   margin: 0;
 }
 
-/*#hero h1 {
-  color: black;
-  font-family: "IBM Plex Sans", sans-serif;
-  background-color: #d6df28;
-  padding: 5px 10px;
-  font-size: 52px;
-  margin-bottom: 0;
-}
-*/
-
 #hero h2 {
   color: black;
   font-family: "Courier New", Courier, monospace;
@@ -435,9 +344,44 @@
   padding: 14px 80px 14px 65px;
   color: white;
   border-color: transparent;
-  font-size: 15px;
-  font-weight: 700;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
+
+#hero button::before,
+#hero button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f02d98;
+  transition: width 0.3s ease;
+}
+
+#hero button::before {
+  top: 0;
+  left: 0;
+}
+
+#hero button::after {
+  bottom: 0;
+  right: 0;
+}
+
+#hero button:hover::before,
+#hero button:hover::after {
+  width: 100%;
+}
+
+#hero button:hover {
+  background-color: #f02d98;
+  color: white;
+}
+
 /*Zima List colour */
 .zima-list li {
   color: #000;
@@ -472,7 +416,7 @@
 #why-zima {
   display: flex;
   justify-content: center;
-  padding: 80px;
+  padding: 50px;
   text-align: left;
 }
 
@@ -486,16 +430,15 @@
   flex-direction: column;
   align-items: center;
   margin-left: 150px;
-  background-image: url(../images/right-heroImg-bkgd.png);
 }
-
-.why-zima-image img {
+ƒ .why-zima-image img {
   object-fit: fill;
   height: 50%;
 }
 
 .why-zima-text {
   text-align: left;
+  top: 0;
 }
 
 .why-zima-text p,
@@ -514,7 +457,6 @@
   text-align: left;
 }
 
-/* Remove the color property from this rule to avoid overriding */
 .why-zima-text ul li a {
   text-decoration: dotted;
   font-weight: bold;
@@ -536,14 +478,40 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.9s ease;
+}
+
+.view-button button::before,
+.view-button button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f02d98;
+  transition: width 0.3s ease;
+}
+
+.view-button button::before {
+  top: 0;
+  left: 0;
+}
+
+.view-button button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.view-button button:hover::before,
+.view-button button:hover::after {
+  width: 100%;
 }
 
 .view-button button:hover {
-  background-color: rgb(255, 15, 15);
+  background-color: #f02d98;
   color: white;
 }
-
 /*Contact Page*/
 
 #contact-hero-image {
@@ -723,12 +691,13 @@
 #prev-btn,
 #next-btn {
   position: absolute;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
   font-size: 20px;
   cursor: pointer;
   padding: 20px;
   border: none;
+  color: #000;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -758,12 +727,6 @@
 }
 
 /*Signup Form*/
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
 #signup-form-div {
   flex-direction: row;
   align-items: center;
@@ -826,6 +789,12 @@ body {
   background-color: #333;
 }
 
+#thank-you-message {
+  display: none;
+  color: grey;
+  margin-top: 10px;
+}
+
 /*Zima Product Page*/
 
 .product-display {
@@ -864,7 +833,6 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
 .product-hero-text h2 {
@@ -873,8 +841,12 @@ body {
   color: black;
 }
 
-.product-hero-text button {
+.product-hero-container button {
   margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .orange-box,
@@ -924,10 +896,35 @@ body {
     flex-direction: column;
   }
 }
-.product-hero-container button:hover {
-  background-color: red;
+.product-hero-container button::before,
+.product-hero-container button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f02d98;
+  transition: width 0.3s ease;
 }
 
+.product-hero-container button::before {
+  top: 0;
+  left: 0;
+}
+
+.product-hero-container button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.product-hero-container button:hover::before,
+.product-hero-container button:hover::after {
+  width: 100%;
+}
+
+.product-hero-container button:hover {
+  background-color: #f02d98;
+  color: white;
+}
 .original-box img {
   width: 100%;
   height: auto;
@@ -1549,7 +1546,7 @@ nav {
     display: flex;
     top: 0;
     right: 0;
-    z-index: 100; /* Ensure it stays on top of other elements */
+    z-index: 100;
     width: 100%;
     padding: 1rem;
     position: sticky;
@@ -1557,7 +1554,7 @@ nav {
   }
 
   .ham-menu {
-    display: block; /* show the hamburger menu */
+    display: block;
   }
 }
 
@@ -1623,22 +1620,18 @@ nav {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* lightbox*/
-
 /* Lightbox styling */
 .lightbox {
-  width: 100vw;
-  height: 100vh;
-
+  width: 80vh;
+  height: 80vh;
   position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(105, 105, 105, 0.85);
-  background-image: url("../images/melon-frame.png");
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(22, 22, 22, 0.85);
   background-repeat: no-repeat;
-
-  background-size: 40vh;
-  background-position: 40px bottom;
+  background-size: contain;
+  background-position: center;
 
   z-index: 5000;
 
@@ -1646,17 +1639,19 @@ nav {
 }
 
 .lightbox article {
-  background: #c3c3c3;
+  background: #fffcfc;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .lb_image {
   width: 100%;
   max-width: 400px;
   height: auto;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .lightbox_close {
