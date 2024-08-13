@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="off-screen-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="zima-product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <nav>
+      <a href="#">
+        <img
+          src="images/zima logo.svg"
+          height="80px"
+          class="logo"
+          alt="hero image"
+        />
+      </a>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
     <!-- Nav bar -->
     <header id="header">
       <a href="#"
@@ -17,14 +41,10 @@
 
       <div>
         <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
-          <li><a class="active" href="contact.html">Contact</a></li>
-          <li id="lg-bag">
-            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-          </li>
+          <li class="Underline"><a href="index.html">Home</a></li>
+          <li class="Underline"><a href="#">About Us</a></li>
+          <li class="Underline"><a href="zima-product.html">Product</a></li>
+          <li class="currentPage"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </header>
@@ -35,11 +55,11 @@
           <h1>
             Tell us more<br />
             <p><em>How Can We Help?</em></p>
+            <h2>Fill out the form below</h2>
           </h1>
         </div>
         <div class="content">
           <div class="left">
-            <h2>Fill out the form below</h2>
             <form>
               <label for="first-name">Name <span>(required)</span></label>
               <div class="name-fields">
@@ -127,13 +147,10 @@
       <div class="col">
         <h4>My Account</h4>
         <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track my order</a>
         <a href="#">Help</a>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
