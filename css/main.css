@@ -146,10 +146,10 @@ body {
 
 .hero-title {
   position: absolute;
+  left: 3%;
   top: 35%;
-  left: 10%;
-  z-index: 2; /* Above the image */
-  color: black;
+  z-index: 2;
+  color: white;
   animation: leftOne 2s ease-out forwards;
 }
 
@@ -157,27 +157,54 @@ body {
   position: absolute;
   opacity: 0;
   top: 60%;
-  left: 10%;
+  left: 3%;
   z-index: 2;
-  color: black;
+  color: white;
   animation: leftTwo 1s ease-out 1s forwards;
 }
 
-.hero-button {
+.hero-button button {
   position: absolute;
   top: 70%;
-  left: 10%;
-  z-index: 2;
-  transition: all 0.5s ease-in-out;
+  left: 3%;
+  z-index: 0;
   color: white;
-  border: none;
-  padding: 0px 20px 20px 50px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover state for the button */
+.hero-button:hover {
+  background-color: yellow;
+  color: white;
   cursor: pointer;
 }
-#hero button:hover {
-  color: black;
-  cursor: pointer;
-  box-shadow: inset 0px -120px 0px #de3274;
+
+.hero-button::before,
+.hero-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3vh;
+  background-color: yellow;
+  transition: width 0.2s ease-in;
+}
+
+.hero-button::before {
+  top: 0;
+  left: 0;
+}
+
+.hero-button::after {
+  bottom: 0;
+  right: 0;
+  color: #000;
+}
+
+/* Expand the pseudo-elements on hover */
+.hero-button:hover::before,
+.hero-button:hover::after {
+  width: 100%;
 }
 
 @keyframes leftOnemobile {
@@ -188,20 +215,20 @@ body {
     opacity: 0;
   }
   25% {
-    left: 5%;
+    left: 3%;
     opacity: 0.5;
   }
   50% {
     width: 20%;
     height: 120px;
-    left: 5%;
+    left: 3%;
     opacity: 0.5;
   }
   70% {
     width: 20%;
     height: 120px;
     opacity: 0.5;
-    left: 5%;
+    left: 3%;
     font-size: 50px;
   }
 
@@ -209,7 +236,7 @@ body {
     width: 20%;
     height: 120px;
     opacity: 1;
-    left: 5%;
+    left: 3%;
     font-size: 50px;
   }
 }
@@ -243,20 +270,20 @@ body {
     opacity: 0;
   }
   25% {
-    left: 5%;
     opacity: 0.5;
+    left: 3%;
   }
   50% {
     width: 1000px;
     height: 120px;
-    left: 15%;
+    left: 3%;
     opacity: 0.5;
   }
   70% {
     width: 1000px;
     height: 120px;
     opacity: 0.5;
-    left: 15%;
+    left: 3%;
     font-size: 40px;
   }
 
@@ -264,7 +291,7 @@ body {
     width: 1000px;
     height: 120px;
     opacity: 1;
-    left: 15%;
+    left: 3%;
     font-size: 55px;
   }
 }
@@ -274,12 +301,12 @@ body {
     opacity: 0;
   }
   50% {
-    left: 15%;
+    left: 3%;
     opacity: 0.5;
   }
   70% {
     opacity: 1;
-    left: 15%;
+    left: 3%;
     font-size: 10px;
   }
 
@@ -287,15 +314,13 @@ body {
     width: 1000px;
     height: 100px;
     opacity: 1;
-    left: 15%;
+    left: 3%;
     font-size: 20px;
   }
 }
 
 #hero img {
-  /* stretch across all 3 columns */
   grid-column: 1/-1;
-  /* stay in first row to allow for overlap */
   grid-row: 1/-1;
   justify-self: center;
 }
@@ -304,16 +329,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px; /* Adjust padding if needed */
-  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #hero .grid-con {
-  /* sit in the middle of the 3 column grid */
   grid-column: 3/3;
-  /* stay in the top row, so it overalps the image */
   grid-row: 1/1;
-  /* get rid of any margin from original .grid-con class */
   margin: 0;
 }
 
@@ -336,50 +358,6 @@ body {
   font-family: sans-serif;
   font-weight: 400;
   font-size: 20px;
-}
-
-#hero button {
-  margin-top: 20%;
-  background-color: #000;
-  padding: 14px 80px 14px 65px;
-  color: white;
-  border-color: transparent;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-#hero button::before,
-#hero button::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #f02d98;
-  transition: width 0.3s ease;
-}
-
-#hero button::before {
-  top: 0;
-  left: 0;
-}
-
-#hero button::after {
-  bottom: 0;
-  right: 0;
-}
-
-#hero button:hover::before,
-#hero button:hover::after {
-  width: 100%;
-}
-
-#hero button:hover {
-  background-color: #f02d98;
-  color: white;
 }
 
 /*Zima List colour */
@@ -431,7 +409,7 @@ body {
   align-items: center;
   margin-left: 150px;
 }
-ƒ .why-zima-image img {
+.why-zima-image img {
   object-fit: fill;
   height: 50%;
 }
@@ -490,7 +468,7 @@ body {
   width: 0;
   height: 2px;
   background-color: #f02d98;
-  transition: width 0.3s ease;
+  transition: width 0.9s ease;
 }
 
 .view-button button::before {
@@ -1371,17 +1349,6 @@ footer a:hover {
   color: #088178;
 }
 
-@media (max-width: 768px) {
-  footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  footer .col {
-    align-items: center;
-  }
-}
-
 /* ---Tablet Library Grid Styles--- */
 @media (max-width: 768px) {
   /* make the pic go down */
@@ -1441,6 +1408,19 @@ footer a:hover {
     margin-top: 32px;
     order: -1;
   }
+
+  .hero-button {
+    margin-top: 10%;
+    margin-left: 8%;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer .col {
+    align-items: center;
+  }
 }
 
 /* off-screen-menu */
@@ -1456,9 +1436,47 @@ footer a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: 0.3s ease;
   z-index: 4;
+  .ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    z-index: 4;
+  }
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+  .ham-menu.active span {
+    background-color: white;
+  }
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
 .off-screen-menu ul {
   list-style-type: none;
@@ -1479,7 +1497,7 @@ nav {
     top: 50%;
   }
   .hero-button {
-    top: 60%;
+    top: 50%;
   }
   .flavours-content-text,
   .box3 {
@@ -1490,20 +1508,33 @@ nav {
 @keyframes moveElement {
   100% {
     opacity: 1;
-    left: 15%;
+    left: 3%;
     font-size: 40px;
   }
 }
+
+@keyframes moveElementText {
+  100% {
+    opacity: 1;
+    left: 3%;
+    font-size: 20px;
+    margin-top: 3%;
+  }
+}
+
 @media (max-width: 1088px) {
   .hero-title {
-    top: 25%;
+    top: 30%;
+    left: 0;
     animation: moveElement 2s ease-out forwards;
   }
   .hero-text {
-    top: 40%;
+    top: 43%;
+    animation: moveElementText 2s ease-out 1s forwards;
   }
-  .hero-button {
-    top: 50%;
+  .hero-button button {
+    left: 3%;
+    top: 60%;
   }
 }
 @media (max-width: 880px) {
@@ -1519,7 +1550,7 @@ nav {
     height: auto;
   }
   .hero-text {
-    top: 55%;
+    top: 70%;
     animation: leftTwomobile 1s ease-out 1s forwards;
   }
   .hero-button {
@@ -1529,10 +1560,10 @@ nav {
     cursor: pointer;
   }
   .container img {
-    content: url("../images/cover-page\(mobile\).png");
+    content: url("../images/cover-page-v2.png");
   }
   .hero-title {
-    top: 20%;
+    top: 30%;
     animation: leftOnemobile 2s ease-out forwards;
   }
 
@@ -1570,13 +1601,24 @@ nav {
     top: 58%;
   }
 }
+@media (max-width: 425px) {
+  .container img {
+    content: url("../images/cover-page\(mobile\).png");
+  }
+}
 
 @media (max-width: 477px) {
+  .hero-title {
+    top: 25%;
+    color: black;
+  }
   .hero-text {
-    top: 30%;
+    top: 40%;
+    color: black;
   }
   .hero-button {
-    top: 42%;
+    top: 60%;
+    left: 5%;
   }
 }
 
