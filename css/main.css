@@ -1344,6 +1344,9 @@ footer a:hover {
 /* ---Tablet Library Grid Styles--- */
 @media (max-width: 768px) {
   /* make the pic go down */
+  .hero-button{
+    margin-left: 60px;
+  }
   .why-zima-content {
     display: flex;
     flex-direction: column;
