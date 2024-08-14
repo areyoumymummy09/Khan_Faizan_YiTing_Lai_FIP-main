@@ -53,19 +53,19 @@ const content = document.querySelector("#flavor-lightbox article");
 
 let flavors = [
   {
-    name: "Original",
-    description: "Original Taste",
-    image: "images/original.jpg",
-  },
-  {
-    name: "Grapes",
-    description: "Grapes taste",
+    name: "Grapes Delight",
+    description: "Experience the burst of juicy grapes in every sip, delivering a refreshing and irresistible taste sensation.",
     image: "images/grapes.jpg",
   },
   {
-    name: "Orange",
-    description: "Orange taste",
-    image: "images/orange.jpg",
+    name: "Orange Punch",
+    description: "Zesty and vibrant, this orange punch packs a citrusy punch that will awaken your senses.",
+    image: "images/Orange.jpg",
+  },
+  {
+    name: "Melon Splash",
+    description: "Dive into the crisp, cool refreshment of melon with a splash of green goodness that's pure delight.",
+    image: "images/green.png",
   },
 ];
 
@@ -87,6 +87,7 @@ function fillContent(event) {
 
   // Set the flavor description
   let flavorDescription = document.createElement("p");
+  flavorDescription.style.textAlign="left";
   flavorDescription.innerText = flavor.description;
   flavorDescription.classList.add("lb_text");
   content.appendChild(flavorDescription);
@@ -98,7 +99,12 @@ function fillContent(event) {
   flavorImage.classList.add("lb_image");
   content.appendChild(flavorImage);
 
+    // Set the size of the image
+    flavorImage.style.width = '300px';  // Change the width to your preference
+    flavorImage.style.height = 'auto';  // Maintain the aspect ratio
   lightbox.style.display = "block";
+
+
 }
 
 // Attach event listeners to each image
