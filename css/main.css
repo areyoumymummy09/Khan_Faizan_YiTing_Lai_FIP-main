@@ -607,7 +607,10 @@ body {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-
+  .lightbox article{
+    width: 2px;
+    height: auto;
+  }
   .box1,
   .box2,
   .box3 {

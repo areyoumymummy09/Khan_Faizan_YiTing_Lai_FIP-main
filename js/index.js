@@ -60,7 +60,7 @@ let flavors = [
   {
     name: "Orange Punch",
     description: "Zesty and vibrant, this orange punch packs a citrusy punch that will awaken your senses.",
-    image: "images/Orange.jpg",
+    image: "images/orange.png",
   },
   {
     name: "Melon Splash",
@@ -99,11 +99,11 @@ function fillContent(event) {
   flavorImage.classList.add("lb_image");
   content.appendChild(flavorImage);
 
-    // Set the size of the image
-    flavorImage.style.width = '300px';  // Change the width to your preference
-    flavorImage.style.height = 'auto';  // Maintain the aspect ratio
+    flavorImage.style.width = '300px';  // Set width to a fixed value for landscape
+    flavorImage.style.height = 'auto';  // Set height to auto
   lightbox.style.display = "block";
-
+  lightbox.style.width='auto';
+  lightbox.style.height='auto';
 
 }
 
